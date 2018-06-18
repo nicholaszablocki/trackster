@@ -1,28 +1,13 @@
-html{
+body{
+  background-color: rgb(35, 2, 63);
   font-weight: bold;
-  background-color: purple;
-  color:black;
 }
-.searchbutton{
-  width:300px;
-  height:50px;
-  border:3px solid red;
+#button{
+  background-color: pink;
+  border:3px solid black;
   border-radius: 4px;
+  width:40px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  background-color: purple;
-}
-.table{
-  display: flex;
-  justify-content: space-around;
-  background-color: purple;
-}
-.logo{
-  font-weight:bold;
-  color: white;
-  background-color: purple;
-}
-form{
-  background-color: purple;
+  justify-content: center;
 }
