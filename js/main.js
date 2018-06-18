@@ -1,7 +1,7 @@
 $(document).ready(function(){
   $.ajax('.searchbutton').click(function(){
     $.ajax({
-      url: 'http://ws.audioscrobbler.com/2.0/',
+      url: 'http://api.musicgraph.com/',
       datatype: 'jsonp',
       success: function(data) {
         $('.band').html('<class="col-md-4">'+data.current_observation.band);
