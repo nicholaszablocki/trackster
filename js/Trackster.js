@@ -1,8 +1,8 @@
 $(document).ready(function(){
   const API_KEY='32912447447300ee595e9b667ec0b80d'
   $("#button").click(function(){
+    $('#tracklistcontainer').empty();
     Trackster.searchTracksByTitle($("#input").val());
-
   });
 
   var Trackster = {};
@@ -15,23 +15,24 @@ $(document).ready(function(){
     var i=0;
     var length= tracks.length;
     for (var i=0; i<tracks.length; i++){
+       var mediumAlbumArt=tracks[i].image[1]['#text'];
        var information=
         '<div class="row">'+
           '<div class="col-md-6">'+
-           '<a href="https://youtu.be/eI_O5_tJ1hA">'+
+           '<a href='+tracks[i].url+">"+
              '<i class="far fa-play-circle" style="color:purple;">'+
              '</i></a>'+
            tracks[i].name+
          '</div>'+
          '<div class="col-md-2">'+
-           'THE RAINCOATS'+
-         '</div>'+
-         '<div class="col-md-2'+
-           'PREMIERE'+
+           tracks[i].artist+
          '</div>'+
          '<div class="col-md-2">'+
-           '1 BILLION+'+
-         '</div>+'+
+          "<img src="+mediumAlbumArt+">"+
+         '</div>'+
+         '<div class="col-md-2">'+
+           tracks[i].listeners+
+         '</div>'+
         '</div>'
         $('#tracklistcontainer').append(information);
     }
@@ -49,7 +50,7 @@ $(document).ready(function(){
     $.ajax({
       url: "https://ws.audioscrobbler.com/2.0/?method=track.search&track="+title+"&api_key="+API_KEY+"&format=json",
       success: function(response){
-        console.log(response)
+        Trackster.renderTracks(response.results.trackmatches.track)
       }
     });
   };
