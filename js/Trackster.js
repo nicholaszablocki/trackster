@@ -50,7 +50,7 @@ $(document).ready(function(){
     $.ajax({
       url: "https://ws.audioscrobbler.com/2.0/?method=track.search&track="+title+"&api_key="+API_KEY+"&format=json",
       success: function(data){
-        console.log(data)
+        Trackster.renderTracks(data.results.trackmatches.track);
       }
     });
   };
