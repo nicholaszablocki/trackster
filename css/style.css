@@ -6,8 +6,11 @@ body{
   background-color: pink;
   border:3px solid black;
   border-radius: 4px;
-  width:40px;
+  width:140px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.row{
+  height:300px;
 }
