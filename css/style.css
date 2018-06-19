@@ -1,0 +1,22 @@
+body{
+  background-color:rgb(35, 2, 63);
+}
+#button{
+  background-color:pink;
+  height:50px;
+  width:190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+#pinkcolor{
+  background-color: pink;
+  color:white;
+  font-weight: bold;
+}
+#whitecolor{
+  background-color: white;
+  color:black;
+  font-weight:bold;
+}
