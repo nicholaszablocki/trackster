@@ -10,8 +10,8 @@ body{
   justify-content: center;
   border-radius: 4px;
 }
-#pinkcolor{
-  background-color: pink;
+#violetcolor{
+  background-color: violet;
   color:white;
   font-weight: bold;
 }
@@ -19,4 +19,9 @@ body{
   background-color: white;
   color:black;
   font-weight:bold;
+}
+.break{
+  width:100%;
+  height: 10px;
+  background-color:rgb(35, 2, 63);
 }

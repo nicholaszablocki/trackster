@@ -3,13 +3,16 @@ $(document).ready(function(){
   $( "#input" ).keydown(function(event) {
     var searchkey= (event.which);
     if (searchkey==13){
+      event.preventDefault()
       $('#tracklistcontainer').empty();
       Trackster.searchTracksByTitle($("#input").val());
+      $("#input").val("");
     };
   });
   $("#button").click(function(){
     $('#tracklistcontainer').empty();
     Trackster.searchTracksByTitle($("#input").val());
+    $("#input").val("");
   });
 
   var Trackster = {};
