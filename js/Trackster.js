@@ -1,5 +1,12 @@
 $(document).ready(function(){
-  const API_KEY='32912447447300ee595e9b667ec0b80d'
+  const API_KEY='32912447447300ee595e9b667ec0b80d';
+  $( "#input" ).keydown(function(event) {
+    var searchkey= (event.which);
+    if (searchkey==13){
+      $('#tracklistcontainer').empty();
+      Trackster.searchTracksByTitle($("#input").val());
+    };
+  });
   $("#button").click(function(){
     $('#tracklistcontainer').empty();
     Trackster.searchTracksByTitle($("#input").val());
